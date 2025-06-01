@@ -11,7 +11,7 @@ const DownloadApp = () => {
 
             <div className="relative z-10 flex  flex-col md:flex-row items-center justify-evenly   px-4 py-20 gap-10">
                 {/* Left Content */}
-                <div className="max-w-2xl px-14 py-20  space-y-4 bg-black/40 ">
+                <div className="w-[90%] sm:w-2xl px-14 py-20  space-y-4 bg-black/40 ">
                     <p className="text-yellow-500 font-semibold tracking-widest  uppercase">Download For Free</p>
                     <h2 className="text-[36px] lg:text-5xl font-bold">Download the App</h2>
                     <p className="text-gray-200">
@@ -19,7 +19,7 @@ const DownloadApp = () => {
                     </p>
 
                     {/* Buttons */}
-                    <div className="flex items-center gap-4 mt-6">
+                    <div className="flex flex-col md:flex-row md:items-center gap-4 mt-6">
                         <img src={images.appleImage} alt="Google Play" className="w-42 cursor-pointer" />
                         <img src={images.appleImage2} alt="App Store" className="w-42 cursor-pointer" />
                     </div>
