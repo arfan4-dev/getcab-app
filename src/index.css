@@ -1,11 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&family=Playwrite+CU:wght@100..400&display=swap");
+
 @custom-variant dark (&:is(.dark *));
 
-body {
-  font-family: "Outfit", sans-serif;
-}
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -120,4 +117,38 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@font-face {
+  font-family: "TT Commons";
+  src: url("/fonts/TT-Commons-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Commons";
+  src: url("/fonts/TT-Commons-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TT Commons";
+  src: url("/fonts/TT-Commons-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-display: swap;
+}
+/* Apply to site */
+body {
+  font-family: "TT Commons", sans-serif;
+  font-weight: 400; /* Regular for body text */
+}
+h1,
+h2,
+h3 {
+  font-weight: 700; /* Bold for headings */
+}
+.button,
+.cta {
+  font-weight: 500; /* Medium for buttons */
 }

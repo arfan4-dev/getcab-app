@@ -1,4 +1,5 @@
-import { Mail, ArrowRight, Instagram, Twitter, Linkedin, Facebook } from "lucide-react";
+import { Mail, ArrowRight, Instagram, Facebook } from "lucide-react";
+import QRCode from "react-qr-code";
 
 const Footer = () => {
     return (
@@ -32,20 +33,23 @@ const Footer = () => {
                     <ul className="space-y-3">
                         <li className="flex items-center gap-2">
                             <Facebook color="white" size={18} />
-                            <a href="#" className="hover:text-white">Facebook</a>
+                            <a href="https://www.facebook.com/profile.php?id=61570145375023" target="_blank" className="hover:text-white">Facebook</a>
                         </li>
                         <li className="flex items-center gap-2">
                             <Instagram color="white" size={18} />
-                            <a href="#" className="hover:text-white">Instagram</a>
+                            <a href="https://www.instagram.com/drive.uppsala" target="_blank" className="hover:text-white">Instagram</a>
                         </li>
-                        <li className="flex items-center gap-2">
-                            <Twitter color="white" size={18} />
-                            <a href="#" className="hover:text-white">Twitter X</a>
-                        </li>
-                        <li className="flex items-center gap-2">
-                            <Linkedin color="white" size={18} />
-                            <a href="#" className="hover:text-white">LinkedIn</a>
-                        </li>
+                        {/* <li className="flex items-center gap-2">
+                            <FaWhatsapp color="white" size={18} />
+                            <a href=" https://wa.me/46735735005" className="hover:text-white">Whatsapp</a>
+                        </li> */}
+                        {/* WhatsApp QR Code */}
+                        <div className="mt-4 bg-white p-2 rounded w-fit">
+                            <h4 className="text-black text-sm font-semibold mb-1">Scan WhatsApp QR</h4>
+                            <QRCode value="https://wa.me/46735735005" size={80} />
+                        </div>
+
+
                     </ul>
                 </div>
 

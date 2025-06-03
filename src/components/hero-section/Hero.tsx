@@ -19,12 +19,12 @@ const Hero = () => {
 
             {/* Navbar */}
             <div className="relative z-10 flex justify-between md:justify-evenly items-center px-6 md:px-12 py-4">
-                <div className="text-2xl font-bold text-[#fdb813]">
+                <div className="text-3xl font-bold text-[#fdb813]">
                     <span className="text-white">Get</span>Cab
                 </div>
 
                 {/* Desktop Nav */}
-                <div className="hidden md:flex space-x-6 text-sm font-medium">
+                <div className="hidden md:flex space-x-6 text-[16px] font-medium">
                     {navLinks.map((label, i) => (
                         <a
                             key={i}
@@ -80,7 +80,7 @@ const Hero = () => {
             {/* Hero Content */}
             <div className="relative z-10 flex flex-col items-center justify-center text-center mt-16 px-4 pt-10 pb-28">
                 <p className="text-[#fdb813] tracking-widest mb-2">ENJOY COMFORTABLE TRIP</p>
-                <h1 className="text-4xl lg:text-5xl tracking-widest font-bold mb-6 uppercase">Order Taxi Online</h1>
+                <h1 className="text-4xl lg:text-5xl tracking-widest font-bold mb-6 ">Order Taxi Online</h1>
 
                 {/* Booking Form */}
                 <div className="text-white rounded-md shadow-md p-4 flex flex-wrap justify-center gap-4 max-w-4xl w-full">

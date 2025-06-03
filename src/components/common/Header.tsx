@@ -6,12 +6,12 @@ const Header = () => {
             <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-end gap-6">
                 <div className="flex items-center gap-2">
                     <Phone size={16} />
-                    <span>+46 72 927 23 89</span>
+                    <span>+0735 735 005</span>
                 </div>
-                <div className="flex items-center gap-2">
+                {/* <div className="flex items-center gap-2">
                     <Phone size={16} />
                     <span>+46 73 123 45 67</span>
-                </div>
+                </div> */}
             </div>
         </div>
     );
