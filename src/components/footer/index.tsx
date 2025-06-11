@@ -6,13 +6,13 @@ import { navLinks } from "@/constant";
 const Footer = () => {
     return (
         <footer id="contact" className="bg-[#111] text-gray-300 py-12 px-6 md:px-12">
-            <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-12">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-12 text-[18px]">
                 {/* Kontor Info */}
                 <div data-aos="fade-up">
                     <h4 className="text-white font-semibold mb-4">Kontor</h4>
                     <p>Sverige<br />Almqvistgatan 13,<br />754 30 Uppsala</p>
-                    <p className="mt-3">gizelataxi@gmail.com</p>
-                    <p>+46 72 927 23 89</p>
+                    <p className="mt-3">driveuppsala@gmail.com</p>
+                    <p>+0735 735 005</p>
                 </div>
 
                 {/* Länkar */}
@@ -64,7 +64,7 @@ const Footer = () => {
                             <ArrowRight className="text-white" size={18} />
                         </button>
                     </div>
-                    <label className="text-xs mt-2 inline-block text-gray-400">
+                    <label className="text-sm mt-2 inline-block text-gray-400">
                         <input type="checkbox" className="mr-2 mt-3" />
                         Jag godkänner <a href="#" className="underline">integritetspolicyn</a>.
                     </label>
@@ -72,8 +72,8 @@ const Footer = () => {
             </div>
 
             {/* Bottenrad */}
-            <div className="border-t border-gray-700 pt-6 text-sm text-gray-400 text-center" data-aos="fade-up" data-aos-delay="400">
-                GizelaTaxi 2025 – Alla rättigheter förbehållna. Webbplatsen är designad av{" "}
+            <div className="border-t border-gray-700 pt-6  text-gray-400 text-center" data-aos="fade-up" data-aos-delay="400">
+                Drive Upsala 2025 – Alla rättigheter förbehållna. Webbplatsen är designad av{" "}
                 <a className="underline" href="https://borkowskaprojektuje.pl" target="_blank" rel="noreferrer">
                     borkowskaprojektuje.pl
                 </a>

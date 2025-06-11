@@ -20,13 +20,13 @@ const Hero = () => {
             <div className="absolute inset-0 bg-black/60 z-0" />
 
             {/* Navbar */}
-            <div className="relative z-10 flex justify-between md:justify-evenly items-center px-6 md:px-12 py-4">
+            <div className="relative z-10 flex gap-40 ml-20 items-center px-6 md:px-12 py-4">
                 <div className="text-3xl font-bold text-[#fdb813]">
                     <img src={images.logo} className='w-16' alt="" />
                 </div>
 
                 {/* Desktop Nav */}
-                <div className="hidden md:flex space-x-6 text-[16px] font-medium">
+                <div className="hidden md:flex space-x-6 text-[20px] font-medium">
                     {navLinks.map(({ label, href }, i) => (
                         <a
                             key={i}
@@ -79,22 +79,22 @@ const Hero = () => {
 
             {/* Hero Content */}
             <div className="relative z-10 flex flex-col items-center justify-center text-center mt-16 px-4 pt-10 pb-28">
-                <p className="text-[#fdb813] tracking-widest mb-2">NJUT AV EN BEKVÄM RESA</p>
-                <h1 className="text-4xl lg:text-5xl tracking-widest font-bold mb-6 ">Beställ Taxi Online</h1>
+                <p className="text-[#fdb813] tracking-widest mb-2 text-[20px]">NJUT AV EN BEKVÄM RESA</p>
+                <h1 className="text-4xl lg:text-6xl tracking-widest font-bold mb-6 ">Beställ Taxi Online</h1>
 
                 {/* Booking Form */}
                 <div className="text-white rounded-md  p-4 flex flex-wrap justify-center gap-4 max-w-4xl w-full">
-                    <input type="text" placeholder="Startdestination" className="px-4 py-2 border rounded w-48 bg-white text-black placeholder:text-gray-300" />
-                    <input type="text" placeholder="Slutdestination" className="px-4 py-2 border rounded w-48 bg-white text-black placeholder:text-gray-300" />
-                    <div className="flex items-center border rounded w-48 px-4 py-2 gap-2 bg-white text-black">
+                    <input type="text" placeholder="Startdestination" className="px-4 py-2 border rounded w-60 bg-white text-black placeholder:text-gray-300" />
+                    <input type="text" placeholder="Slutdestination" className="px-4 py-2 border rounded w-60 bg-white text-black placeholder:text-gray-300" />
+                    <div className="flex items-center border rounded w-60 px-4 py-2 gap-2 bg-white text-black">
                         <CalendarDays size={16} />
                         <input type="text" placeholder="Tid och Datum" className="w-full outline-none placeholder:text-gray-300" />
                     </div>
-                    <div className="flex items-center border rounded w-48 px-4 py-2 gap-2 bg-white text-black">
+                    <div className="flex items-center border rounded w-60 px-4 py-2 gap-2 bg-white text-black">
                         <Car size={16} />
                         <input type="text" placeholder="Bilklass" className="w-full outline-none placeholder:text-gray-300" />
                     </div>
-                    <div className="flex items-center border rounded w-48 px-4 py-2 gap-2 bg-white text-black">
+                    <div className="flex items-center border rounded w-60 px-4 py-2 gap-2 bg-white text-black">
                         <Phone size={16} />
                         <input type="text" placeholder="Ditt Telefonnummer" className="w-full outline-none placeholder:text-gray-300" />
                     </div>
@@ -104,9 +104,10 @@ const Hero = () => {
                 <div className="mt-4 flex flex-col items-center">
                     <label className="text-xs">
                         <input type="checkbox" className="mr-2" />
-                        Jag godkänner att mina inlämnade uppgifter samlas in och lagras.
+                        <span className='text-[18px]'> Jag godkänner att mina inlämnade uppgifter samlas in och lagras.</span>
+
                     </label>
-                    <button className="mt-4 bg-[#fdb813] hover:bg-[#fdb813] text-white font-semibold px-6 py-2 rounded-full cursor-pointer">
+                    <button className="mt-4 bg-[#fdb813] hover:bg-[#fdb813] text-white font-semibold px-14 text-[18px]  py-2 rounded-full cursor-pointer">
                         Boka Nu
                     </button>
                 </div>
