@@ -14,8 +14,9 @@ const Pricing = () => {
                 Fasta priser på utvalda rutter
             </p>
             <h2 className="text-[40px] lg:text-[57px] mb-6">
-                Säkert, transparent och utan dolda avgifter.
+                Tryggt och pålitligt – till ett pris som passar dig
             </h2>
+
             <hr className="max-w-5xl mx-auto mb-10 border-gray-300" />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto ">
