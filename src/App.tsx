@@ -31,8 +31,8 @@ function App() {
 
       <OurServices />
       <Pricing />
-      <DownloadApp />
       <ServicesInfoSection />
+      <DownloadApp />
       <Footer />
 
     </>

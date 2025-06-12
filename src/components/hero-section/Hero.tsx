@@ -7,13 +7,33 @@ import {
 import { navLinks } from '@/constant';
 
 import { CalendarDays, Car, Menu, Phone } from "lucide-react";
-
+import { useEffect, useState } from 'react';
+const heroImages = [
+    images.image1,
+    images.image2,
+    images.image3,
+];
 const Hero = () => {
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [fade, setFade] = useState(false);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setFade(true); // trigger fade out
+            setTimeout(() => {
+                setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+                setFade(false); // trigger fade in
+            }, 500); // fade duration
+        }, 4000); // image change every 4 sec
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <div
-            className="relative min-h-screen text-white bg-fixed bg-no-repeat bg-center bg-cover"
+            className={`relative min-h-screen text-white bg-fixed bg-no-repeat bg-center bg-cover transition-opacity duration-1000 ${fade ? "opacity-75" : "opacity-100"}`}
             style={{
-                backgroundImage: `url(${images?.heroImg})`,
+                backgroundImage: `url(${heroImages[currentImageIndex]})`,
             }}
         >
             {/* Overlay */}
@@ -21,8 +41,9 @@ const Hero = () => {
 
             {/* Navbar */}
             <div className="relative z-10 flex gap-40 ml-20 items-center px-6 md:px-12 py-4">
-                <div className="text-3xl font-bold text-[#fdb813]">
-                    <img src={images.logo} className='w-16' alt="" />
+                <div className="text-2xl flex items-center gap-5 font-bold ">
+                    <img src={images.logoMain} className='w-20' alt="" />
+                    <p className='text-white'>DRIVE <span className='text-[#fdb813]'>UPPSALA</span></p>
                 </div>
 
                 {/* Desktop Nav */}

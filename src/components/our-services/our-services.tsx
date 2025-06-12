@@ -1,35 +1,25 @@
-import { MapPin, Plane, Map, CarTaxiFront } from "lucide-react";
+import { images } from "@/assets";
+import { services } from "@/constant";
 
 const ServicesSection = () => {
-    const services = [
-        {
-            icon: <MapPin size={70} className="text-[#fdb813]" />,
-            title: "Adresshämtning",
-            desc: "Vi hämtar alltid våra kunder i tid. Tillgänglig 24/7.",
-        },
-        {
-            icon: <Plane size={70} className="text-[#fdb813]" />,
-            title: "Flygplatstransfer",
-            desc: "GetCab är specialiserat på flygplatstransfer dygnet runt.",
-        },
-        {
-            icon: <Map size={70} className="text-[#fdb813]" />,
-            title: "Långdistansresor",
-            desc: "Vi erbjuder långdistansresor till valfri destination.",
-        },
-        {
-            icon: <CarTaxiFront size={70} className="text-[#fdb813]" />,
-            title: "Taxiturer",
-            desc: "Vi erbjuder taxiturer av olika längd och komplexitet.",
-        },
-    ];
+
 
     return (
         <section id="about" className="py-40 bg-white text-center px-4 text-[#1A1919]">
             <p className="text-[#fdb813] font-semibold uppercase mb-2 text-[18px] tracking-widest">Vad Vi Erbjuder</p>
             <h2 className="text-[40px] lg:text-[57px] font-bold mb-4">Välkommen till oss</h2>
             <p className="text-[14px] lg:text-[18px] max-w-2xl mx-auto mb-10">
-                Vi skapade vår taxitjänst för att hjälpa dig hitta de mest pålitliga och högkvalitativa taxitjänsterna, när som helst och var som helst. Alla våra förare är uniformerade och fullt licensierade.
+                <span className="font-bold">Drive Uppsala</span> är ett lokalt taxibolag med ett enkelt uppdrag – att erbjuda
+                <span className="font-bold"> prisvärda, säkra och pålitliga transporter</span> för människor som bor i småstäder runt Uppsala.
+                <br />
+                Vi förstår att boende utanför staden ofta har begränsad tillgång till bekväma resealternativ. Det är därför vi startade Drive Uppsala – för att göra resandet enklare och mer tillgängligt för alla, oavsett var du bor.
+                <br />
+                Med en <span className="font-bold">flotta av väl underhållna fordon</span> erbjuder vi taxitjänster till och från Uppsala, Arlanda flygplats och närliggande områden.
+                Vårt <span className="font-bold">fokus ligger på kundnöjdhet, punktlighet och komfort – till ett rimligt pris</span>.
+                <br />
+                Oavsett om du bor i Vänge, Björklinge, Storvreta, Lindbacken, Knivsta eller i närheten.
+                <br />
+                <span className="font-bold"> Drive Uppsala – din lokala taxi, alltid nära dig.</span>
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
@@ -46,6 +36,12 @@ const ServicesSection = () => {
                     </div>
                 ))}
             </div>
+            <div
+                className="relative h-[1000px] mt-32 text-white bg-fixed bg-no-repeat bg-center bg-contain"
+                style={{ backgroundImage: `url(${images?.image4})` }}
+            ></div>
+
+
         </section>
     );
 };

@@ -36,7 +36,7 @@ const DownloadApp = () => {
                     className="w-full relative flex md:w-96"
                     data-aos="zoom-in"
                 >
-                    <img src={images.phone8} alt="GetCab App på mobil" className="w-full object-contain" />
+                    <img src={images.driveUppsalaMobile} alt="GetCab App på mobil" className="w-full object-contain w-40" />
                 </div>
             </div>
         </section>

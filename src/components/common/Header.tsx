@@ -6,7 +6,7 @@ const Header = () => {
             <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-end gap-6">
                 <div className="flex items-center gap-2">
                     <Phone size={16} />
-                    <span className='text-[18px]'>+0735 735 005</span>
+                    <span className='text-[22px]'>+0735 735 005</span>
                 </div>
                 {/* <div className="flex items-center gap-2">
                     <Phone size={16} />
