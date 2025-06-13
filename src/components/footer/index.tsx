@@ -9,8 +9,9 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-12 text-[18px]">
                 {/* Kontor Info */}
                 <div data-aos="fade-up">
+
                     <h4 className="text-white font-semibold mb-4">Kontor</h4>
-                    <p>Sverige<br />Almqvistgatan 13,<br />754 30 Uppsala</p>
+                    <p>Östra Ågatan 13, <br />Uppsala</p>
                     <p className="mt-3">driveuppsala@gmail.com</p>
                     <p>+0735 735 005</p>
                 </div>

@@ -63,22 +63,23 @@ export const groupedRoutes = [
 
 export const serviceItems = [
   {
-    title: "Resor inom Uppsala",
-    desc: "Boka din taxi 30 minuter före den planerade tiden.",
+    title: "Snabba resor inom Uppsala",
+    desc: "Behöver du åka inom staden? Boka din resa smidigt minst 30 minuter i förväg.",
   },
   {
-    title: "Planerade flygplatstransfer",
-    desc: "Dra nytta av fasta priser för flygplatstransfer och andra längre resor.",
+    title: "Förbokade flygtransfer",
+    desc: "Säkra din transport till eller från flygplatsen med fasta och transparenta priser.",
   },
   {
-    title: "Taxi vid nödsituationer",
-    desc: "Kontakta oss så ser vi om vi kan hämta dig omedelbart från angiven plats.",
+    title: "Expresshjälp vid brådskande behov",
+    desc: "Oväntad situation? Ring oss så försöker vi ordna omedelbar upphämtning.",
   },
   {
-    title: "Lojalitetsprogram",
-    desc: "Skapa ett konto, samla poäng och få rabatter på resor.",
+    title: "Bonusresor för återkommande kunder",
+    desc: "Registrera dig, samla poäng vid varje resa och njut av exklusiva rabatter.",
   },
 ];
+
 
 export const navLinks = [
   { label: "Hem", href: "#" },

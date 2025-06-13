@@ -11,6 +11,7 @@ import OurServices from './components/our-services/our-services'
 import ServicesInfoSection from './components/our-services/service-info-section'
 import Pricing from './components/pricing/Pricing'
 import { useEffect } from 'react';
+import { Toaster } from 'sonner';
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
 
   return (
     <>
+      <Toaster richColors />
       <CustomCursor />
       <Header />
       <Hero />
