@@ -78,14 +78,14 @@ const Hero = () => {
             <div className="absolute inset-0 bg-black/60 z-0" />
 
             {/* Navbar */}
-            <div className="relative z-10 flex gap-40 ml-20 items-center px-6 md:px-12 py-4">
-                <div className="text-2xl flex items-center gap-5 font-bold ">
-                    <img src={images.logo} className='w-24' alt="" />
+            <div className="relative z-10 flex justify-between xl:justify-start md:gap-40 md:ml-20 items-center px-6 md:px-12 py-4">
+                <div className="text-2xl flex  items-center gap-5 font-bold ">
+                    <img src={images.logo} className='w-12 md:w-14 xl:w-20' alt="" />
                     {/* <p className='text-white'>DRIVE <span className='text-[#fdb813]'>UPPSALA</span></p> */}
                 </div>
 
                 {/* Desktop Nav */}
-                <div className="hidden md:flex space-x-6 text-[20px] font-medium">
+                <div className="hidden md:flex space-x-6 text-[16px] xl:text-[20px] font-medium">
                     {navLinks.map(({ label, href }, i) => (
                         <a
                             key={i}
