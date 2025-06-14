@@ -5,13 +5,19 @@ import {
     SheetTrigger
 } from "@/components/ui/sheet";
 import { navLinks } from '@/constant';
+import { formatTo12Hour } from '@/utils/dateTimeConvert';
 import { CalendarDays, Car, Menu, Phone } from "lucide-react";
 import { useEffect, useState } from 'react';
 
 const heroImages = [
     images.image1,
     images.image2,
-    images.image3,
+    images.image8,
+    images.image9,
+    images.image10,
+    images.image11,
+
+
 ];
 import { toast } from 'sonner';
 
@@ -21,10 +27,11 @@ const Hero = () => {
 
     const [start, setStart] = useState("");
     const [end, setEnd] = useState("");
-    const [dateTime, setDateTime] = useState("");
+    const [selectedDate, setSelectedDate] = useState("");
+    const [selectedTime, setSelectedTime] = useState("");
     const [carClass, setCarClass] = useState("");
     const [phone, setPhone] = useState("");
-    const [consent, setConsent] = useState(false);
+    const [agreed, setAgreed] = useState(false);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -38,19 +45,25 @@ const Hero = () => {
     }, []);
 
     const handleBookNow = () => {
-        if (!start || !end || !dateTime || !carClass || !phone) {
+        if (!start || !end || !selectedDate || !selectedTime || !carClass || !phone) {
+            toast.error("Vänligen fyll i alla fält.");
+            return;
+        }
+
+        if (!agreed) {
             toast.error("Du måste godkänna att dina uppgifter sparas.");
             return;
         }
 
-        const message = `Hej! 🚖 *Ny Taxibokning*\n\n📍 Start: ${start}\n📍 Slut: ${end}\n🕒 Tid: ${dateTime}\n🚗 Bilklass: ${carClass}\n📞 Telefon: ${phone}`;
+        const formattedTime = formatTo12Hour(selectedTime);
+        const formattedDateTime = `${selectedDate} ${formattedTime}`;
+
+        const message = `Hej! 🚖 *Ny Taxibokning*\n\n📍 Start: ${start}\n📍 Slut: ${end}\n🕒 Tid: ${formattedDateTime}\n🚗 Bilklass: ${carClass}\n📞 Telefon: ${phone}`;
         const encodedMessage = encodeURIComponent(message);
-        const whatsappNumber = "46735735005"; // no '+' sign
+        const whatsappNumber = "46735735005";
 
-        const url = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-        window.open(url, "_blank"); // 👈 open WhatsApp
-
-        toast.success("Du kommer att omdirigeras till WhatsApp för att slutföra bokningen."); // 👈 show toast after redirect
+        window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, "_blank");
+        toast.success("Du kommer att omdirigeras till WhatsApp för att slutföra bokningen.");
     };
 
 
@@ -67,7 +80,7 @@ const Hero = () => {
             {/* Navbar */}
             <div className="relative z-10 flex gap-40 ml-20 items-center px-6 md:px-12 py-4">
                 <div className="text-2xl flex items-center gap-5 font-bold ">
-                    <img src={images.logoMain} className='w-28' alt="" />
+                    <img src={images.logo} className='w-24' alt="" />
                     {/* <p className='text-white'>DRIVE <span className='text-[#fdb813]'>UPPSALA</span></p> */}
                 </div>
 
@@ -143,9 +156,17 @@ const Hero = () => {
                         <CalendarDays size={16} />
                         <input
                             type="date"
-                            value={dateTime}
-                            onChange={(e) => setDateTime(e.target.value)}
-                            placeholder="Tid och Datum"
+                            value={selectedDate}
+                            onChange={(e) => setSelectedDate(e.target.value)}
+                            className="w-full outline-none placeholder:text-gray-300"
+                        />
+                    </div>
+                    <div className="flex items-center border rounded w-60 px-4 py-2 gap-2 bg-white text-black">
+                        🕒
+                        <input
+                            type="time"
+                            value={selectedTime}
+                            onChange={(e) => setSelectedTime(e.target.value)}
                             className="w-full outline-none placeholder:text-gray-300"
                         />
                     </div>
@@ -176,8 +197,8 @@ const Hero = () => {
                     <label className="text-xs flex items-center gap-2">
                         <input
                             type="checkbox"
-                            checked={consent}
-                            onChange={(e) => setConsent(e.target.checked)}
+                            checked={agreed}
+                            onChange={(e) => setAgreed(e.target.checked)}
                         />
                         <span className='text-[18px]'>Jag godkänner att mina inlämnade uppgifter samlas in och lagras.</span>
                     </label>

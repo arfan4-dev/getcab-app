@@ -2,7 +2,7 @@ import { Phone } from 'lucide-react';
 
 const Header = () => {
     return (
-        <div className="bg-[#222222] w-full h-12 text-white text-sm">
+        <div className="bg-[#fdb813] w-full h-12 text-white text-sm">
             <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-end gap-6">
                 <div className="flex items-center gap-2">
                     <Phone size={16} />
@@ -14,7 +14,7 @@ const Header = () => {
                 </div> */}
             </div>
         </div>
-    );
+    ); 
 };
 
 export default Header;

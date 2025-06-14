@@ -20,7 +20,10 @@ import driveUppsalaMobile from './drive-uppsala-mobile-removebg-preview.png'
 import image1 from "./image-1.jpg";
 import image2 from "./image-2.jpg";
 import image3 from "./image-3.jpg";
-
+import image8 from "./image-8.jpg";
+import image9 from "./image 9.jpg";
+import image10 from "./image-10.jpg";
+import image11 from "./image-11.jpg";
 import image4 from "./image-4.jpg";
 export const images = {
   phone3,
@@ -45,4 +48,5 @@ export const images = {
   image2,
   image3,
   image4,
+  image8, image9, image10, image11
 };

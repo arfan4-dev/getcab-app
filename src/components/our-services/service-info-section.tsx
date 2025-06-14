@@ -37,6 +37,66 @@ const ServicesInfoSection = () => {
                     </div>
                 ))}
             </div>
+
+            <div className="mt-16">
+                <p className="uppercase text-[16px] tracking-widest text-[#1A1919] mb-1">Vad våra kunder säger</p>
+                <h3 className="text-[32px] lg:text-[40px] font-medium text-[#1A1919] mb-6 leading-snug">
+                    Vad våra kunder tycker
+                </h3>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="bg-white p-6 border-l-4 border-[#fdb813] shadow-md">
+                        <p className="text-gray-700 text-[16px] italic mb-4">
+                            “Pålitliga och trevliga förare. Jag använder Drive Uppsala regelbundet för att ta mig till Arlanda – alltid i tid och bra priser!”
+                        </p>
+                        <p className="text-[#1A1919] font-semibold">– Johan, Björklinge</p>
+                    </div>
+
+                    <div className="bg-white p-6 border-l-4 border-[#fdb813] shadow-md">
+                        <p className="text-gray-700 text-[16px] italic mb-4">
+                            “Äntligen en taxitjänst för oss utanför stan. Superenkel bokning och trygga resor.”
+                        </p>
+                        <p className="text-[#1A1919] font-semibold">– Sara, Storvreta</p>
+                    </div>
+
+                    <div className="bg-white p-6 border-l-4 border-[#fdb813] shadow-md">
+                        <p className="text-gray-700 text-[16px] italic mb-4">
+                            “Fantastisk upplevelse! Professionella förare och alltid punktliga. Rekommenderas varmt.”
+                        </p>
+                        <p className="text-[#1A1919] font-semibold">– Erik, Bälinge</p>
+                    </div>
+
+                    <div className="bg-white p-6 border-l-4 border-[#fdb813] shadow-md">
+                        <p className="text-gray-700 text-[16px] italic mb-4">
+                            “Jag bokade en taxi mitt i natten – kom i tid och chauffören var väldigt hjälpsam.”
+                        </p>
+                        <p className="text-[#1A1919] font-semibold">– Lina, Vaksala</p>
+                    </div>
+
+                    <div className="bg-white p-6 border-l-4 border-[#fdb813] shadow-md">
+                        <p className="text-gray-700 text-[16px] italic mb-4">
+                            “Trevlig kundtjänst och lättanvänd bokningssida. Kommer definitivt använda igen.”
+                        </p>
+                        <p className="text-[#1A1919] font-semibold">– Markus, Luthagen</p>
+                    </div>
+
+                    <div className="bg-white p-6 border-l-4 border-[#fdb813] shadow-md">
+                        <p className="text-gray-700 text-[16px] italic mb-4">
+                            “Vi reste med barn – fick barnstol utan problem. Rekommenderar för familjer.”
+                        </p>
+                        <p className="text-[#1A1919] font-semibold">– Emma, Flogsta</p>
+                    </div>
+
+                    <div className="bg-white p-6 border-l-4 border-[#fdb813] shadow-md">
+                        <p className="text-gray-700 text-[16px] italic mb-4">
+                            “Alltid rena bilar och trevliga förare. Känns tryggt att resa med Drive Uppsala.”
+                        </p>
+                        <p className="text-[#1A1919] font-semibold">– David, Gottsunda</p>
+                    </div>
+                </div>
+            </div>
+
+
         </section>
     );
 };
