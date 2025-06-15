@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/sheet";
 import { navLinks } from '@/constant';
 import { formatTo12Hour } from '@/utils/dateTimeConvert';
-import { CalendarDays, Car, Menu, Phone } from "lucide-react";
+import { CalendarDays, Menu, Phone } from "lucide-react";
 import { useEffect, useState } from 'react';
 
 const heroImages = [
