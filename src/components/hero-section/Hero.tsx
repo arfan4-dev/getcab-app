@@ -29,7 +29,7 @@ const Hero = () => {
     const [end, setEnd] = useState("");
     const [selectedDate, setSelectedDate] = useState("");
     const [selectedTime, setSelectedTime] = useState("");
-    const [carClass, setCarClass] = useState("");
+    // const [carClass, setCarClass] = useState("");
     const [phone, setPhone] = useState("");
     const [agreed, setAgreed] = useState(false);
 
@@ -45,7 +45,7 @@ const Hero = () => {
     }, []);
 
     const handleBookNow = () => {
-        if (!start || !end || !selectedDate || !selectedTime || !carClass || !phone) {
+        if (!start || !end || !selectedDate || !selectedTime || !phone) {
             toast.error("Vänligen fyll i alla fält.");
             return;
         }
@@ -58,12 +58,21 @@ const Hero = () => {
         const formattedTime = formatTo12Hour(selectedTime);
         const formattedDateTime = `${selectedDate} ${formattedTime}`;
 
-        const message = `Hej! 🚖 *Ny Taxibokning*\n\n📍 Start: ${start}\n📍 Slut: ${end}\n🕒 Tid: ${formattedDateTime}\n🚗 Bilklass: ${carClass}\n📞 Telefon: ${phone}`;
+        const message = `Hej! 🚖 *Ny Taxibokning*\n\n📍 Start: ${start}\n📍 Slut: ${end}\n🕒 Tid: ${formattedDateTime}\n 📞 Telefon: ${phone}`;
         const encodedMessage = encodeURIComponent(message);
-        const whatsappNumber = "46735735005";
+        const smsNumber = "923276232663";
 
-        window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, "_blank");
+        // window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, "_blank");
+        window.location.href = `sms:${smsNumber}?body=${encodedMessage}`;
+
         toast.success("Du kommer att omdirigeras till WhatsApp för att slutföra bokningen.");
+        setStart("")
+        setEnd("")
+        setSelectedDate("")
+        setSelectedTime("")
+        setPhone("")
+        setAgreed(false)
+
     };
 
 
@@ -78,10 +87,10 @@ const Hero = () => {
             <div className="absolute inset-0 bg-black/60 z-0" />
 
             {/* Navbar */}
-            <div className="relative z-10 flex justify-between xl:justify-start md:gap-40 md:ml-20 items-center px-6 md:px-12 py-4">
-                <div className="text-2xl flex  items-center gap-5 font-bold ">
+            <div className="relative z-10 flex justify-between xl:justify-start md:gap-40 lg:ml-20 items-center px-6 md:px-12 py-4">
+                <div className=" flex  items-center gap-5 font-bold ">
                     <img src={images.logo} className='w-12 md:w-14 xl:w-20' alt="" />
-                    {/* <p className='text-white'>DRIVE <span className='text-[#fdb813]'>UPPSALA</span></p> */}
+                    <p className='text-white md:text-2xl '>DRIVE <span className='text-[#fdb813]'>UPPSALA</span></p>
                 </div>
 
                 {/* Desktop Nav */}
@@ -170,7 +179,7 @@ const Hero = () => {
                             className="w-full outline-none placeholder:text-gray-300"
                         />
                     </div>
-                    <div className="flex items-center border rounded w-60 px-4 py-2 gap-2 bg-white text-black">
+                    {/* <div className="flex items-center border rounded w-60 px-4 py-2 gap-2 bg-white text-black">
                         <Car size={16} />
                         <input
                             type="text"
@@ -179,7 +188,7 @@ const Hero = () => {
                             placeholder="Bilklass"
                             className="w-full outline-none placeholder:text-gray-300"
                         />
-                    </div>
+                    </div> */}
                     <div className="flex items-center border rounded w-60 px-4 py-2 gap-2 bg-white text-black">
                         <Phone size={16} />
                         <input

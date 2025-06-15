@@ -8,7 +8,7 @@ import linkedIn from "./Linkedin.svg";
 import twitter from "./Twitter X.svg";
 
 import leftRightArrows from "./left-and-right-arrows.png";
-import logo from "./logo-high.png";
+import logo from "./logo-main-2.png";
 import Hero4 from "./hero-4.png";
 import phone from "./phone.png";
 import phone3 from "./phone-3.png";

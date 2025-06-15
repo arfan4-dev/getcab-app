@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 const ServicesInfoSection = () => {
     return (
-        <section id="#services" className="pt-16 pb-20 px-4 text-left max-w-7xl mx-auto ">
+        <section id="services" className="pt-16 pb-20 px-4 text-left max-w-7xl mx-auto ">
             <p className="uppercase text-[16px] tracking-widest text-[#1A1919] mb-1">Våra Tjänster</p>
             <h2 className="text-[40px] lg:text-[57px] font-medium text-[#1A1919] mb-8 leading-snug">
                 Smidiga och hållbara transporter i och runt Uppsala
