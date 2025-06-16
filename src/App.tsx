@@ -12,6 +12,7 @@ import ServicesInfoSection from './components/our-services/service-info-section'
 import Pricing from './components/pricing/Pricing'
 import { useEffect } from 'react';
 import { Toaster } from 'sonner';
+import ScrollToTopButton from '@/components/common/ScrollToTopButton';
 
 function App() {
 
@@ -36,6 +37,9 @@ function App() {
       <ServicesInfoSection />
       <DownloadApp />
       <Footer />
+      <ScrollToTopButton />
+
+
 
     </>
   )

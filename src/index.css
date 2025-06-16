@@ -166,3 +166,19 @@ h3 {
 html {
   scroll-behavior: smooth;
 }
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: #fdb813;
+  color: white;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  transition: background-color 0.3s ease;
+}
+.scroll-to-top:hover {
+  background-color: #fbbf24;
+}
