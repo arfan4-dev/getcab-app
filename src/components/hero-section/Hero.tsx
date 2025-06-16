@@ -88,7 +88,7 @@ const Hero = () => {
 
             {/* Navbar */}
             <div className="relative z-10 flex justify-between xl:justify-start md:gap-40 lg:ml-20 items-center px-6 md:px-12 py-4">
-                <div className=" flex  items-center gap-2 md:gap-5 font-bold ">
+                <div className=" flex  items-center gap-1 md:gap-5 font-bold ">
                     <img src={images.logo} className='w-12 md:w-14 xl:w-20' alt="" />
                     <p className='text-white md:text-2xl '>DRIVE <span className='text-[#fdb813]'>UPPSALA</span></p>
                 </div>
