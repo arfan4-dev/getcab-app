@@ -60,12 +60,12 @@ const Hero = () => {
 
         const message = `Hej! 🚖 *Ny Taxibokning*\n\n📍 Start: ${start}\n📍 Slut: ${end}\n🕒 Tid: ${formattedDateTime}\n 📞 Telefon: ${phone}`;
         const encodedMessage = encodeURIComponent(message);
-        const smsNumber = "923276232663";
+        const smsNumber = "+46735735005";
 
         // window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, "_blank");
         window.location.href = `sms:${smsNumber}?body=${encodedMessage}`;
 
-        toast.success("Du kommer att omdirigeras till WhatsApp för att slutföra bokningen.");
+        toast.success("Du kommer att omdirigeras till SMS-appen för att slutföra bokningen.");
         setStart("")
         setEnd("")
         setSelectedDate("")
