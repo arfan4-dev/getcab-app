@@ -88,7 +88,7 @@ const Hero = () => {
 
             {/* Navbar */}
             <div className="relative z-10 flex justify-between xl:justify-start md:gap-40 lg:ml-20 items-center px-6 md:px-12 py-4">
-                <div className=" flex  items-center gap-5 font-bold ">
+                <div className=" flex  items-center gap-2 md:gap-5 font-bold ">
                     <img src={images.logo} className='w-12 md:w-14 xl:w-20' alt="" />
                     <p className='text-white md:text-2xl '>DRIVE <span className='text-[#fdb813]'>UPPSALA</span></p>
                 </div>
@@ -141,7 +141,7 @@ const Hero = () => {
             </div>
 
             {/* Hero Content */}
-            <div className="relative z-10 flex flex-col items-center justify-center text-center mt-16 px-4 pt-10 pb-28">
+            <div className="relative z-10 flex flex-col items-center justify-center text-center mt-7 md:mt-16 px-4 pt-10 pb-28">
                 <p className="text-[#fdb813] tracking-widest mb-2 text-[20px]">NJUT AV EN BEKVÄM RESA</p>
                 <h1 className="text-4xl lg:text-6xl tracking-widest font-bold mb-6">Beställ Taxi Online</h1>
 
@@ -209,7 +209,7 @@ const Hero = () => {
                             checked={agreed}
                             onChange={(e) => setAgreed(e.target.checked)}
                         />
-                        <span className='text-[18px]'>Jag godkänner att mina inlämnade uppgifter samlas in och lagras.</span>
+                        <span className='md:text-[18px]'>Jag godkänner att mina inlämnade uppgifter samlas in och lagras.</span>
                     </label>
                     <button
                         onClick={handleBookNow}
